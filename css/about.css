@@ -1,0 +1,186 @@
+/* === Base Styles === */
+:root {
+  --primary-color: #9f1239;      /* Deep rose */
+  --secondary-color: #fda4af;    /* Soft pink */
+  --accent-color: #fecdd3;       /* Light pink */
+  --dark-bg: #1f1f1f;            /* Dark theme background */
+  --text-light: #fff7ed;         /* Cream white */
+  --text-dark: #2e2e2e;          /* Dark gray */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+  --transition: all 0.3s ease;
+  
+    font-size: 18px; /* Increased base font size (from 16px) */
+ 
+  
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: linear-gradient(135deg, #fff0f3 0%, #ffffff 100%);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Header Styles === */
+header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+
+
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--primary-color) !important;
+  letter-spacing: 1.5px;
+}
+
+/* === Main Content === */
+main {
+  margin-top: 80px;
+  padding: 2rem 1rem;
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+
+
+#load-more-btn {
+  background: var(--secondary-color);
+  color: var(--text-dark);
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  margin: 2rem auto;
+  display: block;
+  transition: var(--transition);
+}
+
+#load-more-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(253, 164, 175, 0.4);
+}
+
+/* === Dark Mode === */
+body.dark-mode {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+  color: var(--text-light);
+}
+
+.dark-mode .shayari {
+  background: rgba(31, 31, 31, 0.95);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .shayari-content p {
+  color: var(--text-light);
+}
+
+/* === Footer === */
+footer {
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: auto;
+  position: relative;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.heart {
+  color: var(--secondary-color);
+  animation: heartbeat 1.2s infinite;
+}
+
+
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 1; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  50% { transform: scale(1); }
+  75% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}
+
+.shayari {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+    margin-top: 60px;
+  }
+
+  .shayari {
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .shayari h2 {
+    font-size: 1.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  #load-more-btn {
+    width: 90%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .shayari {
+    padding: 1rem;
+  }
+
+  .shayari-content p {
+    font-size: 1rem;
+  }
+
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
