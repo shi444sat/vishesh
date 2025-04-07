@@ -141,7 +141,7 @@ async function downloadShayari(id) {
       const ctx = canvas.getContext('2d');
       ctx.font = 'bold 20px Arial';
       ctx.fillStyle = 'rgba(255,255,255,0.7)';
-      ctx.fillText('priyavats.netlify.app', canvas.width - 150, canvas.height - 30);
+      ctx.fillText('visheshnotebook.netlify.app', canvas.width - 150, canvas.height - 30);
 
       canvas.toBlob(blob => {
           saveAs(blob, `shayari-${id}-${Date.now()}.png`);
