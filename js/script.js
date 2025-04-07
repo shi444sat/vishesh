@@ -212,7 +212,7 @@ function downloadShayariOnBackground(id) {
         context.font = 'bold 20px Arial';
         context.fillStyle = 'rgba(255, 255, 255, 1.0)';
         context.textAlign = 'right';
-        context.fillText('priyavats.netlify.app', canvas.width - 10, canvas.height - 30);
+        context.fillText('visheshnotebook.netlify.app', canvas.width - 10, canvas.height - 30);
 
         // Create a blob and save the image
         canvas.toBlob(function (blob) {
